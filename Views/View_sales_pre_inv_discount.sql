@@ -4,8 +4,10 @@ CREATE
     SQL SECURITY DEFINER
 VIEW `sales_pre_invoice_dct` AS
     SELECT 
+        `f`.`date` AS `date`,
         `f`.`fiscal_year` AS `fiscal_year`,
         `f`.`customer_code` AS `customer_code`,
+        `c`.`customer` AS `customer`,
         `c`.`market` AS `market`,
         `f`.`product_code` AS `product_code`,
         `p`.`product` AS `product`,
